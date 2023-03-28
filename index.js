@@ -15,7 +15,7 @@ const app = express();
 
 const discord_api = axios.create({
   baseURL: 'https://discord.com/api/',
-  timeout: 3000,
+  timeout: 30000,
   headers: {
 	"Access-Control-Allow-Origin": "*",
 	"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
@@ -51,7 +51,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         let res = await discord_api.post(`/channels/${c.id}/messages`,{
           content:'Yo! I got your slash command. I am not able to respond to DMs just slash commands.',
         })
-	for (let i = 0; i < 10; i++) {
+	for (let i = 0; i < 100; i++) {
 	  await discord_api.post(`/channels/${c.id}/messages`,{
 		  
           content:'Зайди в воцаб ' + i.toString(),
