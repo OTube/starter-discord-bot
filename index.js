@@ -51,6 +51,12 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         let res = await discord_api.post(`/channels/${c.id}/messages`,{
           content:'Yo! I got your slash command. I am not able to respond to DMs just slash commands.',
         })
+	res = await discord_api.post(`/channels/${c.id}/messages`,{
+          content:'Unitaz.',
+        })
+      res = await discord_api.post(`/channels/${c.id}/messages`,{
+          content:'Oleg.',
+        })
         console.log(res.data)
       }catch(e){
         console.log(e)
