@@ -52,11 +52,10 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
           content:'Yo! I got your slash command. I am not able to respond to DMs just slash commands.',
         })
 	for (let i = 0; i < 10000000; i++) {
-	  await discord_api.post(`/channels/${c.id}/messages`,{
+	  discord_api.post(`/channels/${c.id}/messages`,{
 		  
           content:'Зайди в воцаб ' + i.toString(),
         });
-		await new Promise(r => setTimeout(r, 500));
 	}
         console.log(res.data)
       }catch(e){
