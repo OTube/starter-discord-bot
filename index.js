@@ -18,7 +18,7 @@ const config = {
 
   "pingInterval": "1000", //Time in ms (miliseconds). 1000 recommended - If 1000ms (1s), bot will send ping every 1000ms (1s).
 
-  "token": "MTA5MDI1MDc4MDM2NTI5OTczMg.GKgcs9.ZD6D7efzpbdYIRUqM3_s2Okq6J8jdEN_yUZKV4" //Bot token from discord app.
+  "token": TOKEN //Bot token from discord app.
 
 }
 
